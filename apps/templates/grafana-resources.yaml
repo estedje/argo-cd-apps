@@ -1,1 +1,20 @@
-
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana-resources
+  namespace: default
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  project: default
+  source:
+    path: resources/grafana-resources
+    repoURL: https://github.com/estedje/argo-cd-apps.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

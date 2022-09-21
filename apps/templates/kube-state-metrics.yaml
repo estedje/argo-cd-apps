@@ -23,9 +23,6 @@ spec:
             interval: "60s"
             scrapeTimeout: "120s"
             honorLabels: true
-            scheme: https
-            tlsConfig: 
-              insecureSkipVerify: true
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 4.20.0
   syncPolicy:  

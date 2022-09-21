@@ -300,6 +300,7 @@ metadata:
 spec:
   pipelineStages:
     - cri: {}
-  namespaceSelector: {}
+  namespaceSelector: 
+    any: true
   selector:
     matchLabels: {}

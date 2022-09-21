@@ -16,7 +16,7 @@ spec:
       values: |
         prometheus:
           monitor:
-            enabled: false
+            enabled: true
           additionalLabels:
             instance: primary
           namespace: "grafana"

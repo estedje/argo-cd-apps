@@ -29,7 +29,7 @@ spec:
               targetLabel: metrics_path
             - action: replace
               targetLabel: job
-              replacement: integrations/kubernetes/kubelet            
+              replacement: integrations/kubernetes/kube-state-metrics            
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 4.20.0
   syncPolicy:  

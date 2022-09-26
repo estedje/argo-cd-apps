@@ -58,8 +58,11 @@ spec:
     relabelings:
     - sourceLabels:
       - __metrics_path__
-      targetLabel: metrics_path    
-  jobLabel: kubelet
+      targetLabel: metrics_path
+    - action: replace
+      targetLabel: job
+      replacement: integrations/kubernetes/kubelet 
+  jobLabel: integrations/kubernetes/kubelet
   namespaceSelector:
     matchNames:
     - default
